@@ -1,13 +1,13 @@
 use bevy::{
     prelude::*,
     render::{
-        mesh::{MeshVertexAttribute, MeshVertexBufferLayout, MeshVertexBufferLayoutRef, PrimitiveTopology},
+        mesh::{MeshVertexAttribute, MeshVertexBufferLayoutRef, PrimitiveTopology},
         render_asset::RenderAssetUsages,
         render_resource::{
             AsBindGroup, RenderPipelineDescriptor, ShaderRef, SpecializedMeshPipelineError,
             VertexBufferLayout, VertexFormat, VertexStepMode,
         },
-        Extract, RenderApp, RenderSet,
+        Extract, RenderApp,
     },
     sprite::{Material2d, Material2dKey, Material2dPlugin, MaterialMesh2dBundle},
 };
@@ -120,7 +120,7 @@ fn update_line_meshes(
         mesh.insert_attribute(ATTRIBUTE_MITER, miters);
         mesh.insert_attribute(ATTRIBUTE_COLOR, colors);
 
-        commands.entity(entity).insert(MaterialMesh2dBundle {
+        commands.entity(entity).try_insert(MaterialMesh2dBundle {
             mesh: bevy::sprite::Mesh2dHandle(meshes.add(mesh)),
             material: materials.add(LineMaterial { thickness: line.thickness }),
             transform: Transform::from_xyz(0.0, 0.0, 0.0),

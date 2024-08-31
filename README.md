@@ -1,10 +1,14 @@
 # Bevy Line Renderer
 
-Bevy port of https://github.com/mattdesl/three-line-2d 
-
+Bevy port of https://github.com/mattdesl/three-line-2d
 Polylines in a vertex shader; plays nice with projection scale, z-index; supports vertex colors.
+Lazily maintained at best!
 
-Lazily maintained at best! 
+## Compatibility
+
+| Bevy Version | bevy_2d_line Version |
+|--------------|----------------------|
+| 0.14         | 0.1.1                |
 
 ## Installation
 
@@ -12,7 +16,7 @@ Add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-bevy_2d_line = "0.1.0"
+bevy_2d_line = "0.1.1"
 ```
 
 ## Usage
@@ -45,7 +49,6 @@ fn setup(mut commands: Commands) {
         Vec2::new(0.0, 200.0),
         Vec2::new(200.0, 0.0),
     ];
-
     let colors = vec![
         Color::RED,
         Color::GREEN,
@@ -76,7 +79,6 @@ cargo run --example simple_line
 ## License
 
  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
 
 ## Contributing
 
