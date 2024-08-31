@@ -46,6 +46,7 @@ fn main() {
 
 ```rust
 use bevy_2d_line::Line;
+use bevy::{color::palettes::css::{BLUE, GREEN, RED}, prelude::*};
 
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle::default());
@@ -55,10 +56,11 @@ fn setup(mut commands: Commands) {
         Vec2::new(0.0, 200.0),
         Vec2::new(200.0, 0.0),
     ];
+
     let colors = vec![
-        Color::RED,
-        Color::GREEN,
-        Color::BLUE,
+        RED.into(),
+        GREEN.into(),
+        BLUE.into(),
     ];
 
     commands.spawn(Line {
