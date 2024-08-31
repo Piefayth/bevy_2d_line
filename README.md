@@ -1,4 +1,5 @@
 # Bevy Line Renderer
+![image](https://github.com/user-attachments/assets/3873c448-8db4-459f-8235-1b6e5878a727)
 
 Bevy port of https://github.com/mattdesl/three-line-2d
 Polylines in a vertex shader; plays nice with projection scale, z-index; supports vertex colors.
