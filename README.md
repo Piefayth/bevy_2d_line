@@ -2,8 +2,9 @@
 
 Bevy port of https://github.com/mattdesl/three-line-2d 
 
-polylines in a vertex shader; plays nice with projection scale, z-index; supports vertex colors.
+Polylines in a vertex shader; plays nice with projection scale, z-index; supports vertex colors.
 
+Lazily maintained at best! 
 
 ## Installation
 
@@ -11,7 +12,7 @@ Add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-bevy_line_renderer = "0.1.0"
+bevy_2d_line = "0.1.0"
 ```
 
 ## Usage
@@ -20,7 +21,7 @@ bevy_line_renderer = "0.1.0"
 
 ```rust
 use bevy::prelude::*;
-use bevy_line_renderer::LineRenderingPlugin;
+use bevy_2d_line::LineRenderingPlugin;
 
 fn main() {
     App::new()
@@ -34,7 +35,7 @@ fn main() {
 2. Create and spawn a `Line` component:
 
 ```rust
-use bevy_line_renderer::Line;
+use bevy_2d_line::Line;
 
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle::default());
