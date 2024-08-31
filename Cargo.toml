@@ -1,6 +1,6 @@
 [package]
 name = "bevy_2d_line"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "A line rendering plugin for Bevy"
 license = "MIT OR Apache-2.0"
@@ -13,6 +13,7 @@ bevy = { version = "0.14", default-features = false, features = ["bevy_render", 
 
 [dev-dependencies]
 bevy = { version = "0.14", default-features = false, features = ["bevy_render", "bevy_sprite", "x11"] }
+bevy_dev_tools = { version = "0.14" }
 
 [features]
 default = ["bevy/default"]
