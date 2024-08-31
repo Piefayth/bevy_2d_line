@@ -1,9 +1,11 @@
-# Bevy Line Renderer
+# bevy 2d line
+![image](https://github.com/user-attachments/assets/3873c448-8db4-459f-8235-1b6e5878a727)
 
 Bevy port of https://github.com/mattdesl/three-line-2d
 Polylines in a vertex shader; plays nice with projection scale, z-index; supports vertex colors. Does not support picking!
 
 Moving thousands of line endpoints every frame will be slow, because the mesh needs rebuilt when the lines are moved.
+
 
 Lazily maintained at best!
 
