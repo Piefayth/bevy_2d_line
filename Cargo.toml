@@ -1,0 +1,25 @@
+[package]
+name = "bevy_2d_line"
+version = "0.1.0"
+edition = "2021"
+description = "A line rendering plugin for Bevy"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/piefayth/bevy_2d_line"
+keywords = ["gamedev", "graphics", "bevy", "line-rendering"]
+categories = ["game-development", "graphics", "rendering"]
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = ["bevy_render", "bevy_sprite"] }
+
+[dev-dependencies]
+bevy = { version = "0.14", default-features = false, features = ["bevy_render", "bevy_sprite", "x11"] }
+
+[features]
+default = ["bevy/default"]
+
+[[example]]
+name = "simple_line"
+path = "examples/simple_line.rs"
+
+[package.metadata.docs.rs]
+features = ["bevy/default"]
