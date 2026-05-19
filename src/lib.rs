@@ -1,21 +1,21 @@
 use bevy::{
-    asset::embedded_asset,
+    asset::{embedded_asset, RenderAssetUsages},
+    mesh::{
+        MeshVertexAttribute, MeshVertexBufferLayoutRef, PrimitiveTopology, VertexAttributeValues,
+        VertexBufferLayout,
+    },
+    platform::collections::HashMap,
     prelude::*,
     render::{
-        mesh::{
-            MeshVertexAttribute, MeshVertexBufferLayoutRef, PrimitiveTopology,
-            VertexAttributeValues,
-        },
-        render_asset::RenderAssetUsages,
         render_resource::{
-            AsBindGroup, RenderPipelineDescriptor, ShaderRef, SpecializedMeshPipelineError,
-            VertexBufferLayout, VertexFormat, VertexStepMode,
+            AsBindGroup, RenderPipelineDescriptor, SpecializedMeshPipelineError, VertexFormat,
+            VertexStepMode,
         },
         sync_world::RenderEntity,
         Extract, RenderApp,
     },
-    sprite::{Material2d, Material2dKey, Material2dPlugin},
-    utils::HashMap,
+    shader::ShaderRef,
+    sprite_render::{Material2d, Material2dKey, Material2dPlugin},
 };
 
 pub struct LineRenderingPlugin;

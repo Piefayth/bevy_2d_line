@@ -9,11 +9,11 @@ keywords = ["gamedev", "graphics", "bevy", "line-rendering"]
 categories = ["game-development", "graphics", "rendering"]
 
 [dependencies]
-bevy = { version = "0.15", default-features = false, features = ["bevy_render", "bevy_sprite"] }
+bevy = { version = "0.18", default-features = false, features = ["bevy_render", "bevy_sprite_render"] }
 
 [dev-dependencies]
-bevy = { version = "0.15", default-features = false, features = ["bevy_render", "bevy_sprite", "x11"] }
-bevy_dev_tools = { version = "0.15" }
+bevy = { version = "0.18", default-features = false, features = ["bevy_render", "bevy_sprite_render", "x11"] }
+bevy_dev_tools = { version = "0.18" }
 
 [features]
 default = ["bevy/default"]
